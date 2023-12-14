@@ -27,8 +27,7 @@ class VehicleModel(models.Model):
 class Vehicle(models.Model):
     model = models.ForeignKey(VehicleModel, on_delete=models.CASCADE)
     license_plate = models.CharField(max_length=10, unique=True)
-    available = models.BooleanField(default=True)
-    location = models.ForeignKey(Office, on_delete=models.SET_NULL, null=True, blank=True)
+    location = models.ForeignKey(Office, on_delete=models.CASCADE,  null=True, blank=True) 
 
     def __str__(self):
         return f'{self.model} - {self.license_plate}'

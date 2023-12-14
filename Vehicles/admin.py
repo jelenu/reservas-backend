@@ -7,7 +7,7 @@ class VehicleModelAdmin(admin.ModelAdmin):
 
 @admin.register(Vehicle)
 class VehicleAdmin(admin.ModelAdmin):
-    list_display = ('model', 'license_plate', 'available', 'location')
+    list_display = ('model', 'license_plate', 'location')
 
 @admin.register(Office)
 class OfficeAdmin(admin.ModelAdmin):
